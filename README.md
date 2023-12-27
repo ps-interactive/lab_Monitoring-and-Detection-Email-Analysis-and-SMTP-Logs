@@ -1,0 +1,1 @@
+This repository will contain all sample emails, scripts, etc for this lab.
