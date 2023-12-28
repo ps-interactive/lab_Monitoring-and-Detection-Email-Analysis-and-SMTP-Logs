@@ -1,0 +1,3 @@
+"8f7088gv5932jxw9lwwd1b6ttx2pw2ds"
+"google-site-verification=FIGVOKZm6lQFDBJaiC2DdwvBy8TInunoGCt-1gnL4PA"
+"v=spf1 include:_spf.mailgun.org include:_spf.eu.mailgun.org -all"

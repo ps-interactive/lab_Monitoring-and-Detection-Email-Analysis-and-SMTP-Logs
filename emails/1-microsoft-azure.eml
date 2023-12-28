@@ -1,0 +1,415 @@
+Return-path: <bounce+084341.f6a301-example_lab_recipient=icloud.com@azns.microsoft.com>
+Original-recipient: rfc822;example_lab_recipient@icloud.com
+Received: from qs51p00im-qukt01061501.me.com by p63-mailgateway-smtp-7bd69bb886-nkhbh (mailgateway 2402B76)
+	with SMTP id 5ca29096-8b8c-4cca-8dcb-2fead42cba5f 
+	for <example_lab_recipient@icloud.com>; Sun, 12 Nov 2023 13:46:47 GMT
+X-Apple-MoveToFolder: INBOX 
+X-Apple-Action: MOVE_TO_FOLDER/INBOX
+X-Apple-UUID: 5ca29096-8b8c-4cca-8dcb-2fead42cba5f
+Received: from m242-182.mailgun.net (m242-182.mailgun.net [159.112.242.182])
+	by qs51p00im-qukt01061501.me.com (Postfix) with ESMTPS id B905C4C0151
+	for <example_lab_recipient@icloud.com>; Sun, 12 Nov 2023 13:46:45 +0000 (UTC)
+X-ICL-SCORE: 3.333033230041
+X-ICL-INFO: GAtbVUseBVFGSVVESgMGUkFIRFcUWUIPAApbVRYSFhEAREQZF15TQFUcAkpaUlkXGxoDXEgIAlFB
+ SEgRTlEFUkRUAQIRXFoDABQDShpZWAMHAAAWG0RZEAxXBRY4UUwMBlcLHhtCWREaHxJZG19bQFUf
+ AkpaXV8BBxYVGB5EGAEaFERXC1lGX1dIU05WAQdQW0tSRVYBDlBXWQ4SFF8LQBhLUkVVAQ5QWxQH
+ HhRXQwxbFwMDWhBGFgdERBpKBARPREFUWRVRXw4SDAhZFlVCQFUdAkpaUUwMBlcLHhtCWREaHxJZ
+ G19bQFUUDxNFEgpQRUtVRkkBBFNGTVBDTR4HUEBBABZKBFIAFk1TThkIdgMPFxVZFVlVEBoKCREM
+ HlUNGEdEVwpTC0ASDA8bFFFDDxA5BB4WUUQbExgFAxdCT0wWGEQ=
+Authentication-Results: bimi.icloud.com; bimi=none
+X-ARC-Info: policy=fail; arc=none
+Authentication-Results: arc.icloud.com; arc=none
+Authentication-Results: dmarc.icloud.com; dmarc=pass header.from=microsoft.com
+X-DMARC-Info: pass=pass; dmarc-policy=reject; s=r1; d=r1; pdomain=microsoft.com
+X-DMARC-Policy: v=DMARC1; p=reject; pct=100; rua=mailto:itex-rua@microsoft.com; ruf=mailto:itex-ruf@microsoft.com; fo=1
+Authentication-Results: dkim-verifier.icloud.com;
+	dkim=pass (1024-bit key) header.d=azns.microsoft.com header.i=@azns.microsoft.com header.b=Xt6mHJZZ
+Authentication-Results: spf.icloud.com; spf=pass (spf.icloud.com: domain of bounce+084341.f6a301-example_lab_recipient=icloud.com@azns.microsoft.com designates 159.112.242.182 as permitted sender) smtp.mailfrom="bounce+084341.f6a301-example_lab_recipient=icloud.com@azns.microsoft.com"
+Received-SPF: pass (spf.icloud.com: domain of bounce+084341.f6a301-example_lab_recipient=icloud.com@azns.microsoft.com designates 159.112.242.182 as permitted sender) receiver=spf.icloud.com; client-ip=159.112.242.182; helo=m242-182.mailgun.net; envelope-from="bounce+084341.f6a301-example_lab_recipient=icloud.com@azns.microsoft.com"
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=azns.microsoft.com;
+ q=dns/txt; s=krs; t=1699796805; x=1699804005; h=Content-Transfer-Encoding:
+ Content-Type: Subject: Subject: Date: To: To: From: From: MIME-Version:
+ Message-Id: Sender; bh=e5AHcTel+RprirtzIYPLuR8xnU8eEG9tzKW5STDHi40=;
+ b=Xt6mHJZZxMaPc3qE6gKuBsnvzxu7XQdwSEJ6vY5j7yeySAP6Yk325VzH2S/olsSNH6hQX1XSBPrVlDPA2H2LF4ua9DD5iUD8xb+2xjcxX86f6QvNpJe7Ritdrz2cmJ531Npb4STDtMoxt0XqwSP3RLkxHJJZcgqmefJKYwRucgg=
+X-Mailgun-Sending-Ip: 159.112.242.182
+X-Mailgun-Sid: WyIwZjA4OSIsImd1aWxsYXVtZUBiaW5hcnlmYWN0b3J5LmNhIiwiZjZhMzAxIl0=
+Received: from eus2oneim000001 (<unknown> [52.184.145.166]) by 35a85e7eb705 with SMTP id
+ 6550d745ae1c3d811d0fc6e8 (version=TLS1.2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256); Sun, 12 Nov 2023 13:46:45 GMT
+Message-Id: <20231112134645.1258fa24dbc459a8@azns.microsoft.com>
+X-Mailgun-Tag: TrackingId:7_8G-D8Z
+X-Mailgun-Tag: CommunicationId:11000131847887
+X-Mailgun-Tag: CommunicationType:Unknown
+X-Mailgun-Rewrite-Sender-Header: false
+X-Mailgun-Variables: {"AzNsId": "27d2fa48-664d-432c-933f-20c2e38819b9" }
+MIME-Version: 1.0
+From: "Microsoft Azure" <azure-noreply@microsoft.com>
+To: example_lab_recipient@icloud.com
+Date: 12 Nov 2023 13:46:45 +0000
+Subject: Action recommended: Ensure your resources that interact with Azure
+ services are using TLS 1.2 by 31 October 2024
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+X-CLX-Shades: None
+X-Proofpoint-GUID: ZV6mxF2RBX_LOi6pIflJDd99rtBUvOVb
+X-Proofpoint-ORIG-GUID: ZV6mxF2RBX_LOi6pIflJDd99rtBUvOVb
+
+<!-- SUBJECT: Action recommended: Ensure your resources that interact with =
+Azure services are using TLS 1.2 by 31 October 2024 -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=3D"utf-8" />
+    <title></title>
+
+    <style>
+
+        .preheader {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0;
+            color: #f4f4f4;
+            height: 0;
+            width: 0;
+            line-height: 1px;
+            font-size: 1px;
+            max-height: 0;
+            max-width: 0;
+            overflow: hidden;
+        }
+
+        .main-container {
+            font-family: "Segoe UI", -apple-system, system-ui, BlinkMacSyst=
+emFont, Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-weight: 400;
+            /*color: #1a1a1a;*/
+            margin: auto;
+            max-width: 616px !important;
+        }
+
+        .body-container {
+            padding: 10px 25px 0px 25px;
+        }
+
+        .body-text {
+            line-height: 20px;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .bold {
+            font-weight: 600 !important;
+        }
+
+        .body-link {
+            color: #0072c6;
+            text-decoration: none;
+        }
+
+
+        .body-text-title {
+            font-family: "Segoe UI", -apple-system, system-ui, BlinkMacSyst=
+emFont, Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-weight: 400;
+            padding: 0;
+            margin-bottom: 10px;
+            line-height: 30px;
+            font-size: 24px;
+        }
+
+        .body-text-header {
+            font-family: "Segoe UI", -apple-system, system-ui, BlinkMacSyst=
+emFont, Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-weight: 400;
+            padding: 0;
+            margin-bottom: 10px;
+            line-height: 26px;
+            font-size: 20px;
+        }
+
+        .body-table {
+            display: inline-block;
+            border: none;
+            border-collapse: collapse;
+            margin: 15px 0px 15px 0px;
+        }
+
+        .table-cell {
+            font-family: "Segoe UI", -apple-system, system-ui, BlinkMacSyst=
+emFont, Roboto, "Helvetica Neue", Arial, sans-serif;
+            /*color: #1a1a1a;*/
+            border-collapse: collapse;
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .code {
+            background: #f4f4f4;
+            background-color: #f4f4f4;
+            border-radius: 3px;
+            color: #1a1a1a;
+            display: inline-block;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 12px;
+            margin: 2px;
+            padding: 2px;
+            max-width: 616px;
+            overflow-wrap: break-word;
+        }
+
+        .accountinfo-container {
+            padding: 0px 25px 25px 25px;
+        }
+
+        .accountinfo-card {
+            border-bottom: 1px solid #dddddd;
+            padding-bottom: 15px;
+        }
+
+        .survey-container {
+            padding: 0px 25px 15px 25px;
+        }
+
+        .survey-link {
+            color: #4875c7;
+            font-family: "Segoe UI", -apple-system, system-ui, BlinkMacSyst=
+emFont, Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            padding: 5px;
+            Margin: 0;
+            text-align: center;
+            line-height: 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .footer-container {
+            padding: 25px;
+            background-color: #f4f4f4;
+        }
+
+        .azurelogo-container {
+            padding: 0px 30px 0px 25px;
+        }
+
+        .azure-logo {
+            height: 22px !important;
+            width: 155px !important;
+        }
+
+        .microsoft-logo {
+            outline: none;
+            text-decoration: none;
+            width: 103px;
+            max-width: 100%;
+            clear: both;
+            display: block;
+            height: 22px;
+        }
+
+        .footer-text {
+            Margin: 0;
+            color: #6a6a6a;
+            font-family: "Segoe UI", -apple-system, system-ui, BlinkMacSyst=
+emFont, Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-weight: 400;
+            padding: 0;
+            text-align: left;
+            line-height: 18px !important;
+            font-size: 12px !important;
+            Margin-bottom: 6px;
+            word-wrap: normal;
+        }
+
+        .footer-link {
+            color: #6a6a6a;
+            font-family: "Segoe UI", -apple-system, system-ui, BlinkMacSyst=
+emFont, Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-weight: 400;
+            text-decoration: underline;
+        }
+
+        .social-icon {
+            height: 16px !important;
+            width: 26px;
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+<body>
+
+
+    <div class=3D"preheader">
+        <!--BEGIN PREHEADER TEXT-->
+        Support for TLS 1.0 and TLS 1.1 will end.
+        <!--END PREHEADER TEXT-->
+    </div>
+
+
+
+
+
+    <table class=3D"main-container" align=3D"center" width=3D616>
+        <tbody>
+            <tr>
+                <td class=3D"azurelogo-container">
+                    <img class=3D"azure-logo" src=3D"https://cxpsncdn1.azur=
+eedge.net/cxpsnemail/LogoAzureGrey.png" alt=3D"Microsoft Azure" title=3D"Mi=
+crosoft Azure" height=3D22 width=3D155>
+                </td>
+            </tr>
+            <tr>
+                <td class=3D"body-container">
+                    <div style=3D"border-bottom: 1px solid #dddddd; padding=
+-bottom: 15px; max-width: 616px; overflow-wrap: break-word;">
+                        <h1 class=3D"body-text-title">If you have resources=
+ that interact with Azure services and still use TLS 1.1 or earlier, transi=
+tion them to TLS 1.2 or later by 31 October 2024</h1>
+
+<p class=3D"body-text">
+<em>You're receiving this email because you're an Azure customer.  </em>
+</p>
+
+<p class=3D"body-text">
+To enhance security and provide best-in-class encryption for your data, <sp=
+an class=3D"bold">we'll require interactions with Azure services to be secu=
+red using Transport Layer Security (TLS) 1.2 or later beginning 31 October =
+2024</span>, when support for TLS 1.0 and 1.1 will end.  =20
+</p>
+
+<p class=3D"body-text">
+The Microsoft implementation of older TLS versions is not known to be vulne=
+rable, however, TLS 1.2 and later offer improved security with features suc=
+h as perfect forward secrecy and stronger cipher suites.
+</p>
+
+<h2 class=3D"body-text-header">
+Recommended action
+</h2>
+<p class=3D"body-text">
+To avoid potential service disruptions, <span class=3D"bold">confirm that</=
+span> <span class=3D"bold">your resources that interact with Azure services=
+ are using TLS 1.2 or later</span>. Then:
+</p>
+
+
+
+<ul>
+
+<li class=3D"body-text">
+If they're already exclusively using TLS 1.2 or later, you don't need to ta=
+ke further action.
+</li>
+
+<li class=3D"body-text">
+If they still have a dependency on TLS 1.0 or 1.1, <span class=3D"bold">tra=
+nsition</span> <span class=3D"bold">them to TLS 1.2 or later by 31 October =
+2024</span>.=20
+</li>
+
+</ul>
+
+<h2 class=3D"body-text-header">
+Help and support=20
+</h2>
+<p class=3D"body-text">
+Read more about the <a href=3D"https://aka.ms/RemoveLegacyTLS" target=3D"_b=
+lank" class =3D"body-link">update to TLS 1.2</a>. If you have questions, ge=
+t answers from community experts in <a href=3D"https://aka.ms/azureqa" targ=
+et=3D"_blank" class =3D"body-link">Microsoft Q&A</a>. If you have a support=
+ plan and you need technical help, please create a <a href=3D"https://learn=
+=2Emicrosoft.com/azure/azure-portal/sup=
+portability/how-to-create-azure-suppor=
+t-request" target=3D"_blank" class =3D"body-link">support request</a>.
+</p>
+
+
+                    </div>
+                </td>
+            </tr>
+
+            <!-- {BEGIN ACCOUNT INFORMATION SECTION} -->
+
+
+            <!-- {END ACCOUNT INFORMATION SECTION} -->
+           =20
+           =20
+
+            <tr>
+                <td class=3D"footer-container">
+
+                    <a href=3D"https://www.facebook.com/microsoftazure" tar=
+get=3D"_blank" style=3D"text-decoration: none; border: none;">
+                        <img src=3D"https://cxpsncdn1.azureedge.net/cxpsnem=
+ail/facebook-grey.png" alt=3D"Facebook" title=3D"Facebook" class=3D"social-=
+icon" height=3D16 width=3D17 style=3D"width: 17px;">
+                    </a>
+
+                    <a href=3D"https://twitter.com/azure" target=3D"_blank"=
+ style=3D"text-decoration: none; border: none;">
+                        <img src=3D"https://cxpsncdn1.azureedge.net/cxpsnem=
+ail/twitter-grey.png" alt=3D"Twitter" title=3D"Twitter" class=3D"social-ico=
+n" height=3D16 width=3D26>
+                    </a>
+
+                    <a href=3D"https://www.youtube.com/user/windowsazure" t=
+arget=3D"_blank" style=3D"text-decoration: none; border: none;">
+                        <img src=3D"https://cxpsncdn1.azureedge.net/cxpsnem=
+ail/youtube-grey.png" alt=3D"YouTube" title=3D"YouTube" class=3D"social-ico=
+n" height=3D16 width=3D26>
+                    </a>
+
+                    <a href=3D"https://www.linkedin.com/showcase/microsoft-=
+developers/" target=3D"_blank" style=3D"text-decoration: none; border: none=
+;">
+                        <img src=3D"https://cxpsncdn1.azureedge.net/cxpsnem=
+ail/linkedin-grey.png" alt=3D"LinkedIn" title=3D"LinkedIn" class=3D"social-=
+icon" height=3D16 width=3D26>
+                    </a>
+
+                    <p class=3D"footer-text">
+                        This message from Microsoft is an important part of=
+ a program, service, or product that you or your company purchased or parti=
+cipates in. Microsoft respects your privacy. Please read our
+                        <a class=3D"footer-link" href=3D"https://privacy.mi=
+crosoft.com/privacystatement" target=3D"_blank" title=3D"Privacy Statement"=
+>
+                            Privacy Statement</a>.
+                       =20
+                    </p>
+                    <p class=3D"footer-text">
+                        This is a mandatory service communication. To set y=
+our contact preferences for other communications, visit the
+                        <a class=3D"footer-link" href=3D"https://account.mi=
+crosoft.com/account/ManageMyAccount" target=3D"_blank" title=3D"Promotional=
+ Communications Manager">
+                            Promotional Communications Manager</a>.
+                      =20
+                    </p>
+                    <p class=3D"footer-text">
+                        Microsoft Corporation, <span class=3D"no-wrap" styl=
+e=3D"display: inline-block;word-break: keep-all; text-decoration: none;">On=
+e Microsoft Way, Redmond, WA 98052</span>
+                    </p>
+                    <img class=3D"microsoft-logo" src=3D"https://cxpsncdn1.=
+azureedge.net/cxpsnemail/LogoMicrosoftGrey.png" alt=3D"Microsoft" title=3D"=
+Microsoft" height=3D22 width=3D103>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+<img width=3D"1px" height=3D"1px" alt=3D"" src=3D"http://email.azns.microso=
+ft.com/o/eJxcyrFu8yAQAOCnMZstDs5wDAzR_0tVlk7p0qU6H5CixFA5jqrk6St17Px9h-fr7Z=
+ii8ckURhqdwzSiNTIGa8totJhsiSAsQaVYHFsNKkdwIfjgSM_qMwZyjsIMKXESnZMU75GclCUbn=
+BevajTaWAAwYNHhPIGZqbDBtAjOgWlAzc92m9YqW7_1sk_SV7XF871er3xf84B6qY23R2HZ-_aY=
+hNUeTxvLpbbzMQ324D_oZfxP72qP__q63lsV3mtvvwigtQYLhJ7I_y2nx1ce7OGtXVr_bj8BAAD=
+___wUUwE"></body>
+</html>
+

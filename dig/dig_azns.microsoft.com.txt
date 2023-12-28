@@ -1,0 +1,2 @@
+"v=spf1 include:mailgun.org ~all"
+"google-site-verification=wJxmncLwH3OTUQ-tzWOh-6gyFwsHF2UBW4cd6RXj3Tg"

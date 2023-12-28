@@ -1,0 +1,62 @@
+Return-Path: <g@caffeinesecurity.com>
+X-Original-To: accounting@detgep.com
+Delivered-To: accounting@detgep.com
+Received: from mail-ua1-f46.google.com (mail-ua1-f46.google.com [209.85.222.46])
+	by detgep.com (Postfix) with ESMTPS id 4A41B401F6
+	for <accounting@detgep.com>; Fri, 24 Nov 2023 19:41:31 +0000 (UTC)
+Received: by mail-ua1-f46.google.com with SMTP id a1e0cc1a2514c-7ba7b361b22so674893241.1
+        for <accounting@detgep.com>; Fri, 24 Nov 2023 11:41:31 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=caffeinesecurity.com; s=google; t=1700854890; x=1701459690; darn=detgep.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=OHealBiEmwyZ+Ja31yotqRPAEKV4x1YpVv72GS/Wt+M=;
+        b=CkXcAZoMJd+Ykz2/2ybw3nBtJ3GdjMHgY4hO9YWAgL+soSRsNuDOxg1Vy2ZY1Ufyyc
+         5sAoT8sAKzlVN6AfSp0BfKkJ3MvH3VbnfeG3nx7tIviHhUCp2P2IvZBCu6MUEeelFhZv
+         aohLHx0gCIcp9Je2+vLdng3oQ5+C2bFLOD3PI=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1700854890; x=1701459690;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=OHealBiEmwyZ+Ja31yotqRPAEKV4x1YpVv72GS/Wt+M=;
+        b=qFOfeGgM8O+54/vsw1zxYgGJqwDw7MUekBy9v/CWrexm8fnkO1aZ6tfR2fUja81OyY
+         8cijisBsmew1f8g/S1DK8TOYNYKZ5h2FqsPFGHBtljWY9xuYm7gBaxhgMpTtuh6CMYxs
+         WIecS3N8NJCbqIwC+3Qxe1t2lGRN+GDVsxYkdDCjdWEYW5V25pdpkbRWP+sE1JX1E9Yg
+         aNa1cDnAP2gsIHZxv8up4xetcbjeB9ApM9IoCM1N3L1kuXIk9UXAWo57nNa6fd16Fcnw
+         AHpUcaj5ovdyA19+t4EUYoWyYnEthjYlYwQgK+RgK4ija/c8zTyKwn3yOOwufqF1O4xo
+         LDwg==
+X-Gm-Message-State: AOJu0YxmLgqwRQTPcieIlyGCX4Ic9Tor5+nPFDTJdeE7cbPqoCl/CVEL
+	cwcCzZeC56bKBkiY2U+UzhIl7OlMGOLENkqkC2CPGQ8QFRxbLRNf5h8=
+X-Google-Smtp-Source: AGHT+IGZpbrBjmBUBC6ErXelRl8TbGEuYKoC5tEAJVCtGKpHE8XEDhTvjNiSr4+m95LyKtYeY9iJeCgXMWRJ5CcslfM=
+X-Received: by 2002:a67:f850:0:b0:462:712b:7524 with SMTP id
+ b16-20020a67f850000000b00462712b7524mr3298938vsp.25.1700854890606; Fri, 24
+ Nov 2023 11:41:30 -0800 (PST)
+MIME-Version: 1.0
+From: Caffeine Security <invoicing@caffeinesecurity.com>
+Date: Fri, 24 Nov 2023 14:41:19 -0500
+Message-ID: <CACc67PzaL9ja9=9cbvo6heBvPQHHy51rycQcR+FRcxnjEe5wKw@mail.gmail.com>
+Subject: Your Monthly Bill
+To: accounting@detgep.com
+Content-Type: multipart/alternative; boundary="00000000000091ca9b060aeb2326"
+
+--00000000000091ca9b060aeb2326
+Content-Type: text/plain; charset="UTF-8"
+
+Good afternoon DETGEP accounting department.
+
+Your invoice this month stands at 17,982$.
+
+Please wire the money to account 5044 9194 7517 4819
+
+Thank you
+
+--00000000000091ca9b060aeb2326
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Good afternoon DETGEP=C2=A0accounting department.<div><br>=
+</div><div>Your invoice this month stands at 17,982$.</div><div><br></div><=
+div>Please wire the money to account 5044 9194 7517 5813</div><div><br></di=
+v><div>Thank you</div></div>
+
+--00000000000091ca9b060aeb2326--
